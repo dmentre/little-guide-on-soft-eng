@@ -1,0 +1,36 @@
+Little guide on Software Engineering
+====================================
+
+The purpose of this guide is to give in a concise manner the essential
+rules of good Software Engineering.
+
+1. Use meaningful names
+
+ Names of variables, procedures, methods, packages, ... should let the
+ reader understand the purpose of the entity without having to look at
+ its context, internals, etc.
+
+2. Test or prove thoroughly your code
+
+3. Be DRY: Don't Repeat Yourself
+
+4. Cut program into orthogonal modules with loose dependency between
+   them
+
+5. Document the why in code (internals) and the how of interface
+   (externals)
+
+6. Automate everything
+
+7. Use contracts and assertions
+
+8. Use minimal dependencies but don't reinvent the wheel
+
+9. Specify and use iterative development cycle
+
+10. Use a version control system and do Continuous Integration
+
+
+TO DO
+=====
+

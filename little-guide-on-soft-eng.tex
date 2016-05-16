@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+%% rule macro
+\newcounter{RuleNumber}
+\setcounter{RuleNumber}{1}
+\newcommand{\Rule}{Rule \theRuleNumber: \stepcounter{RuleNumber}}
+
+\title{Little guide on Software Engineering}
+\author{David Mentré\\version 0.1}
+\date{2016-05-16}
+
+\begin{document}
+\maketitle
+
+The purpose of this guide is to give in a concise manner the essential
+rules of good Software Engineering.
+
+\begin{description}
+\item[\Rule{} Use meaningful names]
+
+ Names of variables, procedures, methods, packages, ... should let the
+ reader understand the purpose of the entity without having to look at
+ its context, internals, etc.
+
+\item[\Rule{} Test or prove thoroughly your code]
+
+\item[\Rule{} Be DRY: Don't Repeat Yourself]
+
+\item[\Rule{} Cut program into orthogonal modules with loose dependency
+  between them]
+
+\item[\Rule{} Document the why in code (internals) and the how of
+  interface (externals)]
+
+\item[\Rule{} Automate everything]
+
+\item[\Rule{} Use contracts and assertions]
+
+\item[\Rule{} Use minimal dependencies but don't reinvent the wheel]
+
+\item[\Rule{} Specify and use iterative development cycle]
+
+\item[\Rule{} Use a version control system and do Continuous
+  Integration]
+  
+\end{description}
+
+\end{document}

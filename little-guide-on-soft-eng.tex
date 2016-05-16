@@ -5,46 +5,97 @@
 %% rule macro
 \newcounter{RuleNumber}
 \setcounter{RuleNumber}{1}
-\newcommand{\Rule}{Rule \theRuleNumber: \stepcounter{RuleNumber}}
+\newcommand{\Rule}{Rule \theRuleNumber:\stepcounter{RuleNumber}}
 
 \title{Little guide on Software Engineering}
-\author{David Mentré\\version 0.1}
+\author{David Mentré\\\url{david.mentre@bentobako.org}\\Version 0.1}
 \date{2016-05-16}
 
 \begin{document}
 \maketitle
 
+%% TO DO %%
+
+% Add references
+
 The purpose of this guide is to give in a concise manner the essential
 rules of good Software Engineering.
+
+The following rules are given in order, most important first.
 
 \begin{description}
 \item[\Rule{} Use meaningful names]
 
  Names of variables, procedures, methods, packages, ... should let the
  reader understand the purpose of the entity without having to look at
- its context, internals, etc.
+ its context or internals.
 
 \item[\Rule{} Test or prove thoroughly your code]
 
+  Do Unit, Integration, Validation and verification, Resource
+  exhaustion, errors, and recovery, Performance and Usability
+  tests. Mathematically prove the correctness of the most critical
+  parts, no bug should be allowed to slip in them.
+
 \item[\Rule{} Be DRY: Don't Repeat Yourself]
+
+  Say something only once. If you repeat a piece in a similar way,
+  factorize the common parts in a function. Only have one reference for
+  any piece of data, preferably in text form.
 
 \item[\Rule{} Cut program into orthogonal modules with loose dependency
   between them]
 
-\item[\Rule{} Document the why in code (internals) and the how of
-  interface (externals)]
+  To manage complexity, you should use features of your programming
+  language to cut your code in classes, packages, etc. Each module
+  should have a minimal interface revealed to other modules that masks
+  its own ``secret''.
+
+\item[\Rule{} Document the why in code and the how of interfaces]
+
+  Use comments to explain the ``why'' of your code, the non obvious
+  things. The ``how'' is the code. However, for interfaces, it is
+  important to clearly explain your users how to use them, with the most
+  simplest examples.
+
+\item[\Rule{} Use version control system and Continuous Integration]
+
+  Version control system (git, Subversion, ...) free your mind, allowing
+  to go back at any point in your development an issue would occur. By
+  using a Continuous Integration system that pulls out from version
+  control you sources, built and test it up to releasing it, you'll
+  discover issues sooner. Sooner is better.
 
 \item[\Rule{} Automate everything]
 
+  Don't enter manual commands, use scripts to automatically build, test,
+  prove, deploy, ... your code. Such scripts are reproducible and
+  precisely encode knowledge.
+
+\item[\Rule{} Specify but use iterative development]
+
+  Specifications allow to think about the software, its requirements,
+  its architecture and design, etc. However, whatever plan you'll make,
+  it is going to change. So start from the beginning with an iterative
+  approach, being prepared to change all the software development
+  artifacts.
+
 \item[\Rule{} Use contracts and assertions]
+
+  Contracts and assertions are like executable comments: they should
+  break if not satisfied, they document your code but are never
+  out-of-date.
 
 \item[\Rule{} Use minimal dependencies but don't reinvent the wheel]
 
-\item[\Rule{} Specify and use iterative development cycle]
+  External dependencies can make your life much easier, you reuse the
+  experience of others. But too many dependencies migth become
+  unmanageable, with bugs and security issues you don't understand.
 
-\item[\Rule{} Use a version control system and do Continuous
-  Integration]
-  
 \end{description}
+
+\paragraph{Please comment} If you have some feedback, disagree or agree
+with above rules, don't understand them or have suggestions, let me
+know.
 
 \end{document}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pdflatex little-guide-on-soft-eng.tex
+bibtex little-guide-on-soft-eng
+pdflatex little-guide-on-soft-eng.tex
+pdflatex little-guide-on-soft-eng.tex

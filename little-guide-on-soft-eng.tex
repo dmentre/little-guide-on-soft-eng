@@ -10,15 +10,13 @@
 \title{Little Guide on Software Engineering}
 \author{David \textsc{Mentré}\\
   \href{mailto:david.mentre@bentobako.org}{david.mentre@bentobako.org}\\
-  Version 0.2}
-\date{2016-05-17}
+  Version 0.3}
+\date{2016-05-19}
 
 \begin{document}
 \maketitle
 
 %% TO DO %%
-
-% Add references
 
 The purpose of this guide is to give in a concise manner the essential
 rules of good Software Engineering.
@@ -30,67 +28,71 @@ The following rules are given in order, most important first.
 
  Names of variables, procedures, methods, packages, ... should let the
  reader understand the purpose of the entity without having to look at
- its context or internals.
+ its context or internals.\cite[sec 1.1]{kernighan99}
 
 \item[\Rule{} Test or prove thoroughly your code]
 
   Do Unit, Integration, Validation and verification, Resource
   exhaustion, errors, and recovery, Performance and Usability
-  tests. Mathematically prove the correctness of the most critical
-  parts, no bug should be allowed to slip in them.
+  tests.\cite[sec 34 \& 43]{andrew99}\cite[chap 6]{kernighan99}
+  Mathematically prove the correctness of the most critical parts, no
+  bug should be allowed to slip in them.
 
 \item[\Rule{} Be DRY: Don't Repeat Yourself]
 
   Say something only once. If you repeat a piece in a similar way,
   factorize the common parts in a function. Only have one reference for
-  any piece of data, preferably in text form.
+  any piece of data, preferably in text form.\cite[sec 7]{andrew99}
 
 \item[\Rule{} Cut program into orthogonal modules with loose dependency
   between them]
 
-  To manage complexity, you should use features of your programming
-  language to cut your code in classes, packages, etc. Each module
-  should have a minimal interface revealed to other modules that masks
-  its own ``secret''.
+  To manage complexity, use features of your programming language to cut
+  your code in classes, packages, etc. Each module should have a minimal
+  interface revealed to other modules that masks its own ``secret''. A
+  change in one module should not impact
+  others.\cite{parnas1972}\cite[chap 3]{meyer1997}
 
 \item[\Rule{} Document the why in code and the how of interfaces]
 
   Use comments to explain the ``why'' of your code, the non obvious
-  things. The ``how'' is the code. However, for interfaces, it is
-  important to clearly explain your users how to use them, with the most
-  simplest examples.
+  things. The ``how'' is the code.\cite[sec 44]{andrew99} However, for
+  interfaces, it is important to clearly explain your users how to use
+  them, with the most simplest examples.\cite[chap 4]{kernighan99}
 
 \item[\Rule{} Use version control system and Continuous Integration]
 
-  Version control system (git, Subversion, ...) free your mind, allowing
-  to go back at any point in your development an issue would occur. By
-  using a Continuous Integration system that pulls out sources from
-  version control, built and test them up to release state, you'll
-  discover issues sooner. Sooner is better.
+  Version control systems (git, Subversion, ...) free your mind,
+  allowing to go back at any point in your development an issue would
+  occur.\cite[sec 17]{andrew99} By using Continuous Integration, you
+  build, test, prove and release each change. You'll discover issues
+  sooner, you'll be ready at any time.
 
 \item[\Rule{} Automate everything]
 
   Don't enter manual commands, use scripts to automatically build, test,
   prove, deploy, ... your code. Such scripts are reproducible and
-  precisely encode knowledge.
+  precisely encode project knowledge.\cite[sec 42]{andrew99}
 
-\item[\Rule{} Specify but use iterative development]
+\item[\Rule{} Specify in advance but use iterative development]
 
-  Specifications allow to think about the software, its requirements,
-  its architecture and design, etc. However, whatever plan you'll make,
-  it is going to change. So start from the beginning with an iterative
-  approach, being prepared to change all the software development
-  artifacts.
+  Specifications allow to think about the software. Think hard at things
+  you won't change easily later. Define used vocabulary in a dictionary,
+  to share a common understanding. However, whatever plan you'll make,
+  it is going to change. So start with an iterative approach, being
+  prepared to update all software development artifacts.
 
 \item[\Rule{} Use contracts and assertions]
 
   Contracts and assertions are like executable comments: they document
-  your code but they break if not satisfied and are never out-of-date.
+  your code but they break if not satisfied and are never
+  out-of-date.\cite[sec 21]{andrew99}\cite[rule
+    5]{holzmann2006}\cite[chap 11]{meyer1997}
 
 \item[\Rule{} Use minimal dependencies but don't reinvent the wheel]
 
   External dependencies can make your life much easier, you reuse the
-  experience of others. But too many dependencies migth become
+  experience of others. But too many dependencies rapidly become
   unmanageable, with bugs and security issues you don't understand.
 
 \end{description}
@@ -98,5 +100,8 @@ The following rules are given in order, most important first.
 \paragraph{Please comment} If you have some feedback, disagree or agree
 with above rules, don't understand them or have suggestions, let me
 know.
+
+\bibliographystyle{plain}
+\bibliography{bib-lgose}
 
 \end{document}

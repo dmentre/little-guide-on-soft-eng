@@ -25,20 +25,20 @@ The following rules are given in order, most important first.
 
 \begin{description}
 
-\item[\Rule{} Make the right software]
+\item[\Rule{} Make the right software.]
 
   From the beginning consult final users. Show them early designs or
   prototypes and take into account their feedback. The software is
   developed for them.\cite[sec 10, 11 \& 45]{andrew99}
 
-\item[\Rule{} Code for humans, not machines]
+\item[\Rule{} Code for humans, not machines.]
 
   Use meaningful names: your reader should understand the purpose of
   variables, procedures, methods, packages, ... without having to look
   at its context or internals.\cite[sec 1.1]{kernighan99} More
   generally, make your intent the clearest possible. Develop for others.
 
-\item[\Rule{} Make the software right: test or prove thoroughly your code]
+\item[\Rule{} Make the software right: test or prove thoroughly your code.]
 
   Do Unit, Integration, Validation and verification, Resource
   exhaustion, errors, and recovery, Performance and Usability
@@ -46,13 +46,13 @@ The following rules are given in order, most important first.
   Mathematically prove the correctness of the most critical parts, they
   cannot fail.
 
-\item[\Rule{} Be DRY: Don't Repeat Yourself]
+\item[\Rule{} Be DRY: Don't Repeat Yourself.]
 
   Say something only once. If you repeat a piece in a similar way,
   factorize the common parts. Only have one reference for any piece of
   data, preferably in text form.\cite[sec 7]{andrew99}
 
-\item[\Rule{} Cut program in orthogonal, loosely coupled modules]
+\item[\Rule{} Cut program in orthogonal, loosely coupled modules.]
 
   To manage complexity, use features of your programming language to cut
   your code in classes, packages, etc. Each module should have a minimal
@@ -60,14 +60,14 @@ The following rules are given in order, most important first.
   change in one module should not impact
   others.\cite{parnas1972}\cite[chap 3]{meyer1997}
 
-\item[\Rule{} Document the why in code and the how of interfaces]
+\item[\Rule{} Document the why in code and the how of interfaces.]
 
   Use comments to explain the ``why'' of your code, the non obvious
   things. The ``how'' is the code.\cite[sec 44]{andrew99} However, for
   interfaces, it is important to clearly explain your users how to use
   them, with the most simplest examples.\cite[chap 4]{kernighan99}
 
-\item[\Rule{} Use version control system and Continuous Integration]
+\item[\Rule{} Use version control system and Continuous Integration.]
 
   Version control systems (git, Subversion, ...) free your mind,
   allowing to go back at any point in your development an issue would
@@ -75,7 +75,7 @@ The following rules are given in order, most important first.
   build, test, prove and release each change. You'll discover issues
   sooner, you'll be ready at any time.
 
-\item[\Rule{} Specify in advance but use iterative development]
+\item[\Rule{} Specify in advance but use iterative development.]
 
   Specifications allow to think about the software. Think hard at things
   you won't change easily later. Define used vocabulary in a dictionary,
@@ -83,20 +83,20 @@ The following rules are given in order, most important first.
   it is going to change. So start with an iterative approach, being
   prepared to update all software development artifacts.
 
-\item[\Rule{} Automate everything]
+\item[\Rule{} Automate everything.]
 
   Don't enter manual commands, use scripts to automatically build, test,
   prove, deploy, ... your code. Such scripts are reproducible and
   precisely encode project knowledge.\cite[sec 42]{andrew99}
 
-\item[\Rule{} Use contracts and assertions]
+\item[\Rule{} Use contracts and assertions.]
 
   Contracts and assertions are like executable comments: they document
   your code but they break if not satisfied and are never
   out-of-date.\cite[sec 21]{andrew99}\cite[rule
     5]{holzmann2006}\cite[chap 11]{meyer1997}
 
-\item[\Rule{} Use minimal dependencies but don't reinvent the wheel]
+\item[\Rule{} Use minimal dependencies but don't reinvent the wheel.]
 
   External dependencies can make your life much easier, you reuse the
   experience of others. But too many dependencies rapidly become
